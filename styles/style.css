@@ -6,6 +6,11 @@ html {
     color: #ffffff
   }
 
+p {
+  max-width: 500px;
+  word-wrap: break-word;
+}
+
 input {
     position: fixed;
     bottom: 0;

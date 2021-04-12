@@ -1,21 +1,19 @@
-/* function printHelloWorldInFiveSeconds() {
-    function printMessage() {
-        alert("Hello world!");
+function generateTextHelper() {
+    //document.getElementById("output").innerHTML = "<br>Hello World</br>";
+    var text_out = "||||||||||||||||||||||||";
+    for (var i = 0; i < text_out.length; i++) { 
+        document.getElementById("output").innerHTML += text_out[i];
     }
-    setTimeout(printMessage(), 5000)
 }
-
-printHelloWorldInFiveSeconds(); */
 
 function generateText() {
-    document.getElementById("output").innerHTML = "<br>Hello World</br>";
-    for (var i = 0; i <= 10; i++) { 
-        document.getElementById("output").innerHTML += "<br>Hello World</br>";
-    }
+    setInterval(generateTextHelper(), 3000);
 }
 
+setInterval(generateTextHelper(), 3000);
+
 function resetText() {
-    document.getElementById("output").innerHTML = "<br>You pressed reset";
+    document.getElementById("output").innerHTML = "<br></br>";
 }
 
 function display(elt) {
