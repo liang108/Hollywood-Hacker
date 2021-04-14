@@ -7,7 +7,7 @@ html {
   }
 
 p {
-  max-width: 500px;
+  max-width: none;
   word-wrap: break-word;
 }
 

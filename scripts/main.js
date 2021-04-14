@@ -1,16 +1,15 @@
-function generateTextHelper() {
-    //document.getElementById("output").innerHTML = "<br>Hello World</br>";
-    var text_out = "||||||||||||||||||||||||";
-    for (var i = 0; i < text_out.length; i++) { 
-        document.getElementById("output").innerHTML += text_out[i];
-    }
-}
-
 function generateText() {
-    setInterval(generateTextHelper(), 3000);
-}
+    var text_out = "abcdefghijklmnopqrstuvwxyz";
+    var i = 0;
 
-setInterval(generateTextHelper(), 3000);
+    var text_interval = setInterval(function() {
+        document   
+            .getElementById("output")
+            .innerHTML += text_out[i++];
+        if (i == text_out.length)
+            i = 0;
+    }, 50);
+}
 
 function resetText() {
     document.getElementById("output").innerHTML = "<br></br>";
@@ -22,9 +21,3 @@ function display(elt) {
         elt.value = "";
     }
 } 
-
-
-/*text_to_display = document.getElementById("input_text").value;
-document.getElementById("output").innerHTML += "<br>" + text_to_display + "</br>";
-document.getElementById("input_text").value = "";
-*/
