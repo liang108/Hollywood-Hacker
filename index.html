@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Hollywood Hacker</title>
+        <link href="styles/style.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <button onclick="generateText()">
+            Click here to start hacking
+        </button>
+        <button onclick="resetText()">
+            Click here to reset code
+        </button>
+        <p id="output">
+        </p>
+        <input type="text" placeholder="Enter code here..." class="display" onkeydown="display(this)">
+        </input>
+    <script src="scripts/main.js">
+    </script> 
+    </body>
+</html>
