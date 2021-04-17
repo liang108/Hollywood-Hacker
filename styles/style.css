@@ -6,6 +6,12 @@ html {
     color: #ffffff
   }
 
+button {
+  display: inline;
+  background-color: #000000;
+  color: #ffffff;
+}
+
 p {
   max-width: none;
   word-wrap: break-word;

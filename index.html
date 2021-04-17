@@ -8,11 +8,20 @@
         <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
     </head>
     <body>
-        <button onclick="generateText()">
-            Click here to start hacking
+        <button class="btn1" onclick="generateText()">
+            Start hacking
         </button>
-        <button onclick="resetText()">
-            Click here to reset code
+        <button class="btn2" onclick="stopOutput()">
+            Stop hacking
+        </button>
+        <button class="btn3" onclick="resetText()">
+            Clear output
+        </button>
+        <button class="dropbtn" onclick="adjustSpeed()">
+            Adjust speed
+            <p id="speed">
+                Slow
+            </p>
         </button>
         <p id="output">
         </p>
