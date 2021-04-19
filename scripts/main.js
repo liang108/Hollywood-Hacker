@@ -4,19 +4,19 @@ function convertSpeed(currentSpeed)
 {
     if (currentSpeed === "Slow")
     {
-        return 8000;
+        return 400;
     }
     else if (currentSpeed === "Medium")
     {
-        return 4000;
+        return 50;
     }   
     else if (currentSpeed === "Fast")
     {
-        return 1000;
+        return 10;
     }   
     else if (currentSpeed === "Master Hacker")
     {
-        return 1;
+        return 0.0001;
     }
 }
 
@@ -64,7 +64,7 @@ function adjustSpeed()
     else if (currentSpeed === "Fast")
     {
         document.getElementById("speed").innerText = "Master Hacker";
-    }   
+    }
     else if (currentSpeed === "Master Hacker")
     {
         document.getElementById("speed").innerText = "Slow";
