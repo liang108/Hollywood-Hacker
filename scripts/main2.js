@@ -1,42 +1,34 @@
-var textInterval = 0;
+var text_interval = 0;
+var speed = 0;
 
-function convertSpeed(speed)
-{
-    if (speed === "Slow")
-    {
-        return 400;
-    }
-    else if (speed === "Medium")
-    {
-        return 50;
-    }   
-    else if (speed === "Fast")
-    {
-        return 15;
-    }   
-    else if (speed === "Master Hacker")
-    {
-        return 0.0001;
-    }
-}
+var speedMap = new Map(); 
+speedMap.set("Slow", 400);
+speedMap.set("Medium", 50);
+speedMap.set("Fast", 10);
+speedMap.set("Master Hacker", 0.0001);
+
+
+var text = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz\n ";
+var textInterval = setInterval(function() {
+    document
+        .getElementById("output")
+        .innerHTML += text[Math.floor(Math.random() * text.length)];
+    }, Math.random() * speed);
 
 function generateText() 
 {
-    var text = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+=-/;:{}|!~\t\t\t\n\n\n\n\n      ";
+    var text_out = "abcdefghijklmnopqrstuvwxyz\t";
     var speed = convertSpeed(document.getElementById("speed").innerText);
-    window.textInterval = setInterval(function() {
+    window.text_interval = setInterval(function() {
         document   
             .getElementById("output")
-            .innerHTML += text[Math.floor(Math.random() * text.length)];
+            .innerHTML += text_out[Math.floor(Math.random() * text_out.length)];
     }, Math.random() * speed);
-    setInterval(function() {
-        window.scrollBy(0,50);
-    }, 100);
 }
 
 function stopOutput()
 {
-    clearInterval(window.textInterval);
+    clearInterval(window.text_interval);
 }
 
 function resetText() 

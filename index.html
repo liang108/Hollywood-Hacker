@@ -8,21 +8,23 @@
         <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
     </head>
     <body>
-        <button class="btn1" onclick="generateText()">
-            Start hacking
-        </button>
-        <button class="btn2" onclick="stopOutput()">
-            Stop hacking
-        </button>
-        <button class="btn3" onclick="resetText()">
-            Clear text
-        </button>
-        <button class="btn4" onclick="adjustSpeed()">
-            Adjust speed
-            <p id="speed">
-                Slow
-            </p>
-        </button>
+        <div id="buttons">
+            <button class="btn1" onclick="generateText()">
+                Start hacking
+            </button>
+            <button class="btn2" onclick="stopOutput()">
+                Stop hacking
+            </button>
+            <button class="btn3" onclick="resetText()">
+                Clear text
+            </button>
+            <button class="btn4" onclick="adjustSpeed()">
+                Adjust speed
+                <p id="speed">
+                    Slow
+                </p>
+            </button>
+        </div>
         <p id="output">
         </p>
         <input type="text" placeholder="Your code here..." class="display" onkeydown="display(this)">

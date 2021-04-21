@@ -7,9 +7,41 @@ html {
   }
 
 button {
+  z-index: 1;
+  position: fixed;
   display: inline;
+  top: 10px;
   background-color: #000000;
   color: #ffffff;
+}
+
+.btn1 {
+  left: 10px;
+}
+
+.btn2 {
+  left: 110px;
+}
+
+.btn3 {
+  left: 210px;
+}
+
+.btn4 {
+  left: 290px;
+}
+
+#output {
+  z-index: 0;
+  position: absolute;
+  /*
+  box-sizing: border-box;
+  width: 75%;
+  height: 75%;
+  */
+  min-width: 80%;
+  max-height: 80%;
+  bottom: 40px;
 }
 
 p {
