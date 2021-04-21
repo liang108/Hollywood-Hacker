@@ -1,20 +1,20 @@
-var text_interval = 0;
+var textInterval = 0;
 
-function convertSpeed(currentSpeed)
+function convertSpeed(speed)
 {
-    if (currentSpeed === "Slow")
+    if (speed === "Slow")
     {
         return 400;
     }
-    else if (currentSpeed === "Medium")
+    else if (speed === "Medium")
     {
         return 50;
     }   
-    else if (currentSpeed === "Fast")
+    else if (speed === "Fast")
     {
         return 10;
     }   
-    else if (currentSpeed === "Master Hacker")
+    else if (speed === "Master Hacker")
     {
         return 0.0001;
     }
@@ -22,18 +22,21 @@ function convertSpeed(currentSpeed)
 
 function generateText() 
 {
-    var text_out = "abcdefghijklmnopqrstuvwxyz\t";
+    var text = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+=-/;:{}|!~\t\n\n\n\n\n ";
     var speed = convertSpeed(document.getElementById("speed").innerText);
-    window.text_interval = setInterval(function() {
+    window.textInterval = setInterval(function() {
         document   
             .getElementById("output")
-            .innerHTML += text_out[Math.floor(Math.random() * text_out.length)];
+            .innerHTML += text[Math.floor(Math.random() * text.length)];
     }, Math.random() * speed);
+    setInterval(function() {
+        window.scrollBy(0,50);
+    }, 100);
 }
 
 function stopOutput()
 {
-    clearInterval(window.text_interval);
+    clearInterval(window.textInterval);
 }
 
 function resetText() 
